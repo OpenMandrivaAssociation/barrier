@@ -1,0 +1,22 @@
+From 1b74a4bc8c975d99b27fe23ec2c4185b5b21e496 Mon Sep 17 00:00:00 2001
+From: Simon Lees <sflees@suse.de>
+Date: Wed, 3 Nov 2021 13:16:39 +1030
+Subject: [PATCH] Include <cstddef> for NULL
+
+Fixes #1366
+---
+ src/lib/base/Event.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/lib/base/Event.h b/src/lib/base/Event.h
+index 38a2cf1129..7f4461c914 100644
+--- a/src/lib/base/Event.h
++++ b/src/lib/base/Event.h
+@@ -18,6 +18,7 @@
+ 
+ #pragma once
+ 
++#include <cstddef>
+ #include "common/basic_types.h"
+ #include "common/stdmap.h"
+ 
